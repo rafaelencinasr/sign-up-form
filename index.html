@@ -8,15 +8,20 @@
     </head>
     <body>
         <div class="leftPanel">
-            <div id="picture"><!-- <img src="./leafBackground.jpg" alt=""> --></div>
-            <div id="logo">ODIN</div>
+         <img id="picture" src="./img/leafBackground.jpg" alt="A picture of a wild plant in a jungle">
+            <div id="logoArea">
+                <img class="logoImg" src="./img/odin-lined.png" alt="The Odin Project lined logo">
+                <span class="logoText">ODIN</span>
+            </div>
+            <div class="picAuthor">Photo by <a href="https://unsplash.com/es/@haliewestphoto">Halie West</a> on <a href="https://unsplash.com/es/fotos/25xggax4bSA">Unsplash</a></div>
         </div>
 
         <div class="rightPanel">
             <div class="topText">
                 This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.
-
-                You <em>know</em> you want to.
+                <br>Sign up <em>now</em> to get started
+                <br>
+                <br>You <em>know</em> you want to.
             </div>
             <div class="bodyForm">
             <h3>Let's do this!</h3>
@@ -25,11 +30,11 @@
                     <div class="row1">
                         <div class="labelBlock">
                             <label for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName">
+                            <input type="text" id="firstName" placeholder="John">
                         </div>
                         <div class="labelBlock">
                             <label for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName">
+                            <input type="text" id="lastName" placeholder="Doe">
                         </div>
                     </div>
                     
@@ -37,12 +42,12 @@
 
                         <div class="labelBlock">
                             <label for="userEmail">EMAIL</label>
-                            <input type="email" id="userEmail">
+                            <input type="email" id="userEmail" placeholder="example@example.com">
                         </div>
                         
                         <div class="labelBlock">
                             <label for="phoneNumber">PHONE NUMBER</label>
-                            <input type="number" name="phoneNumber" id="phoneNumber">
+                            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="(123) 456-7890">
                         </div>
                     </div>
 
@@ -62,8 +67,8 @@
                 </form>
             </div>
             <div class="bottomSubmit">
-                <button type="submit">Submit button</button>
-                <button type="menu">Menu button</button>
+                <button class="createAccount" type="submit">Create Account</button>
+                <div class="login">Already have an account? <a href="">Log in</a></div>
             </div>
         </div>
     </body>
