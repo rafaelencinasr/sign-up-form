@@ -1,0 +1,75 @@
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* ---Left side--- */
+.leftPanel{
+    /* flex: 1; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33vw;
+}
+
+
+#logo {
+    flex: 1 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    background-color: black;
+    opacity: 1;
+    color: white;
+    text-align: center;
+}
+/* ---Left side end--- */
+
+/* Right side */
+
+.rightPanel {
+    --left-padding: 20px;
+    width: 67vw;
+    display: flex;
+    flex-direction: column;
+}
+.topText {
+    padding-left: var(--left-padding);
+    border: 2px solid blue;
+}
+
+.bodyForm {
+    padding-left: var(--left-padding);
+    border: 2px solid red;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.labelBlock {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 300px;
+    margin: 10px 20px 10px 0;
+
+}
+
+.row1,
+.row2,
+.row3 {
+    display: flex;
+    flex-direction: row;
+}
+
+.bottomSubmit {
+    padding-left: var(--left-padding);
+    border: 2px solid rgb(40, 180, 98);
+    margin: 20px 0;
+}
