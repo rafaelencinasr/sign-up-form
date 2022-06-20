@@ -45,6 +45,8 @@ function checkPassword(){
         confirmPasswordInput.classList.add("correcto");
         passwordInput.classList.add("correcto");
         matchedPasswords.textContent='';
+        confirmPasswordInput.setCustomValidity('');
+        
     }
     else{
         console.log("Diff passwords");
@@ -54,6 +56,7 @@ function checkPassword(){
         confirmPasswordInput.classList.remove("correcto");
         passwordInput.classList.remove("correcto");
         matchedPasswords.textContent='* Passwords do not match';
+        confirmPasswordInput.setCustomValidity('Passwords do not match');
     }
 };
 
