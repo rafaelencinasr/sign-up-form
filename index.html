@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Sign-up form project</title>
-        <script src="./script.js"></script>
+        <script src="./script.js" defer></script>
         <link rel="stylesheet" href="./style.css">
     </head>
     <body>
@@ -25,16 +25,19 @@
             </div>
             <div class="bodyForm">
             <h3>Let's do this!</h3>
-                <form action="" class="formContainer">
+                <form action="#" method="get" class="formContainer" id="form-inputs">
 
                     <div class="row1">
                         <div class="labelBlock">
                             <label for="firstName">FIRST NAME</label>
-                            <input type="text" id="firstName" placeholder="John">
+                            <input type="text" id="firstName" placeholder="John" required aria-required="true" pattern="[a-zA-z]+( [a-zA-z]+)?"><span class="validity"></span>
                         </div>
+                        <!-- /^[a-zA-Z\s]*$/ -->
+                        <!-- [a-zA-z]+ -->
+
                         <div class="labelBlock">
                             <label for="lastName">LAST NAME</label>
-                            <input type="text" id="lastName" placeholder="Doe">
+                            <input type="text" id="lastName" placeholder="Doe" required pattern="[a-zA-z]+( [a-zA-z]+)?"><span class="validity"></span>
                         </div>
                     </div>
                     
@@ -42,12 +45,17 @@
 
                         <div class="labelBlock">
                             <label for="userEmail">EMAIL</label>
-                            <input type="email" id="userEmail" placeholder="example@example.com">
+                            <input type="email" id="userEmail" placeholder="example@example.com" required> <span class="validity"></span>
                         </div>
                         
                         <div class="labelBlock">
                             <label for="phoneNumber">PHONE NUMBER</label>
-                            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="(123) 456-7890">
+                            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="1234567890"
+                            pattern="[0-9]{10}" required 
+                            oninvalid="this.setCustomValidity('Allowed format: 1234567890')"
+                            oninput="this.setCustomValidity('')" 
+                            maxlength="12">
+                            <span class="validity"></span>
                         </div>
                     </div>
 
@@ -55,19 +63,19 @@
 
                         <div class="labelBlock">
                             <label for="userPassword">PASSWORD</label>
-                            <input type="password" name="userPassword" id="userPassword">
+                            <input type="password" name="userPassword" id="userPassword" required>
+                            <div id="matchedPasswords"></div>
                         </div>
 
                         <div class="labelBlock">
                             <label for="userPasswordConfirm">CONFIRM PASSWORD</label>
-                            <input type="password" name="userPasswordConfirm" id="userPasswordConfirm">
+                            <input type="password" name="userPasswordConfirm" id="userPasswordConfirm" required>
                         </div>
                     </div>
-
                 </form>
             </div>
             <div class="bottomSubmit">
-                <button class="createAccount" type="submit">Create Account</button>
+                <button class="createAccount" type="submit" form="form-inputs">Create Account</button>
                 <div class="login">Already have an account? <a href="">Log in</a></div>
             </div>
         </div>

@@ -112,6 +112,7 @@ body {
     flex: 1;
     max-width: 300px;
     margin: 10px 20px 10px 0;
+    position: relative;
 
 }
 
@@ -171,4 +172,44 @@ input:focus {
 
 ::placeholder {
     color:rgb(201, 201, 201)
+}
+
+input + span {
+    position: absolute;
+    right: -10px;
+    bottom: 25px;
+    padding-right: 30px;
+  }
+  
+  input:invalid+span:after {
+    position: absolute; content: '✖';
+    padding-left: 5px;
+    color: #8b0000;
+  }
+  
+  input:valid+span:after {
+    position: absolute;
+    content: '✓';
+    padding-left: 5px;
+    color: #009000;
+  }
+
+  input:placeholder-shown+span:after {
+    position: absolute; content: '';
+    padding-left: 5px;
+    color: #8b0000;
+  }
+
+.error {
+    border: 1px solid #ff0000;
+}
+
+.correcto {
+    border: 1px solid #34df01;
+}
+
+#matchedPasswords {
+    position: absolute;
+    color: red;
+    bottom: -15px
 }
