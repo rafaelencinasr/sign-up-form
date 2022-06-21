@@ -9,7 +9,7 @@ data validation for the inputs.
 -The email input is validated by setting the "type" to "email". This prevents
 overcomplicated regex patterns that might be missing something. 
 
--Phone number is set to only accept numbers, with a max character limit of 12.
+-Phone number is set to only accept numbers, with a max character limit of 10.
 
 -Password isn't doesn't required specific properties, just checks if the "Confirm
 Password" value is the same as the previews input.
